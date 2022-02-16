@@ -18,7 +18,21 @@ The easiest way to reproduce this analysis is by using [Google Colab](https://co
 
 I choose to create a environment with Jupyter and Spark in my local machine using a [Docker Compose file](./docker-compose.yml), which uses [Jupyter PySpark Notebook image](https://hub.docker.com/r/jupyter/pyspark-notebook). Details of Docker Compose installation can be found on it's [official documentation](https://docs.docker.com/compose/install/).
 
-Since you have it installed in your machine, all you need is run the following command in a terminal window:
+Since you have it installed in your machine, all you need is run the following commands in a terminal window:
+
+1. Clone repository:
+
+```
+$ git clone https://github.com/lucasfusinato/pyspark-stock-exchange-analysis
+```
+
+2. Open project's folder:
+
+```
+$ cd pyspark-stock-exchange-analysis
+```
+
+3. Start containers:
 
 ```
 $ docker-compose up -d
