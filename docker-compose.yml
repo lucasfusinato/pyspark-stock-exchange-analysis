@@ -1,0 +1,19 @@
+version: '3.4'
+
+networks:
+  sparkanalysis:
+    external: false
+
+services:
+  jupyter:
+    image: jupyter/pyspark-notebook
+    container_name: sparkanalysis_jupyter
+    networks:
+      - sparkanalysis
+    volumes:
+      - ./config/jupyter_notebook_config.py:/home/jovyan/.jupyter/jupyter_notebook_config.py
+      - ./data:/home/jovyan/data:ro
+      - ./notebooks/quiz-local.ipynb:/home/jovyan/notebooks/quiz-local.ipynb
+    ports:
+      - '8888:8888'
+      - '4040:4040'
